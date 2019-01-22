@@ -16,7 +16,7 @@ function exactMatch(drivers, params) {
 }
 
 // * `exactMatchToList()` - This function works the same way as the `exactMatch()` function, except that instead of returning an array of `driver` objects, it returns an array of strings with each element in the array corresponding to the matching driver's name. For example, `exactMatchToList(drivers, { revenue: 2000 })` will return `['Sammy']`, as `Sammy` is the name of the matching `driver` object.
-function exactMatchToList(drivers, attr) {
-  const k = Object.keys(attr)
-  return drivers.filter(d => d[k] === attr[k] ).map(d => d.name)
+function exactMatchToList(drivers, params) {
+  const k = Object.keys(params)
+  return drivers.filter(d => d[k] === params[k] ).map(d => d.name)
 }  
